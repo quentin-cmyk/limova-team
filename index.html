@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limova Team — L'IA Opérationnelle In-Situ pour Entreprises (30 à 500 Salariés)</title>
+  <title>Limova Team — L'IA Opérationnelle In-Situ pour Entreprises (30 à 500+ Salariés)</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script>
     tailwind.config = {
@@ -13,9 +15,15 @@
           colors: {
             amberLimova: '#E69C23',
             amberHover: '#D97706',
-            darkComex: '#0B0F19',
-            cardDark: '#131B2E',
-            borderDark: '#232D42'
+            darkBg: '#0A0A0B',
+            darkCard: '#131B2E',
+            borderDark: '#232D42',
+            slackPurple: '#4A154B',
+            slackDark: '#3F0E40',
+            slackGreen: '#2EB67D',
+            teamsIndigo: '#5B5FC7',
+            teamsDark: '#464EB8',
+            teamsBar: '#292929'
           },
           fontFamily: {
             sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Inter', 'sans-serif'],
@@ -26,7 +34,7 @@
   </script>
   <style>
     body {
-      background-color: #0B0F19;
+      background-color: #0A0A0B;
       color: #E2E8F0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
     }
@@ -34,7 +42,7 @@
       box-shadow: 0 0 35px -5px rgba(230, 156, 35, 0.25);
     }
     .glass-nav {
-      background: rgba(11, 15, 25, 0.85);
+      background: rgba(10, 10, 11, 0.9);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -45,171 +53,250 @@
   <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 w-full z-50 glass-nav">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo Limova Team (Sans .ai) -->
       <a href="#" class="flex items-center space-x-3">
         <span class="text-2xl font-black tracking-tight text-white flex items-center gap-1.5">
           <span class="text-amberLimova">L</span>IMOVA
         </span>
-        <span class="bg-amberLimova text-white text-xs font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+        <span class="bg-amberLimova text-white text-xs font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow">
           TEAM
         </span>
       </a>
 
+      <!-- Menu links -->
       <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <a href="#vision" class="hover:text-amberLimova transition">La Rupture</a>
-        <a href="#simulateur" class="hover:text-amberLimova transition">Démo In-Situ</a>
-        <a href="#piliers" class="hover:text-amberLimova transition">Les 4 Piliers</a>
+        <a href="#vision" class="hover:text-amberLimova transition">La Solution</a>
+        <a href="#reassurance" class="hover:text-amberLimova transition">Solidité & Médias</a>
+        <a href="#simulateur" class="hover:text-amberLimova transition">Simulation Slack & Teams</a>
+        <a href="#piliers" class="hover:text-amberLimova transition">4 Piliers</a>
         <a href="#roi" class="hover:text-amberLimova transition">Calculateur ROI</a>
         <a href="#comparatif" class="hover:text-amberLimova transition">Matrice</a>
-        <a href="#securite" class="hover:text-amberLimova transition">Sécurité & Objections</a>
       </div>
 
-      <a href="https://meetings-eu1.hubspot.com/quentin-coudert?uuid=4019de18-eba7-46dc-8cde-d0cdb8e3c54c" 
+      <!-- CTA Nav -->
+      <a href="https://meetings-eu1.hubspot.com/quentin-coudert/limova-team?uuid=4238e347-91cc-4a51-bfda-f605644303c7" 
          target="_blank" 
-         class="bg-amberLimova hover:bg-amberHover text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow transition transform hover:-translate-y-0.5">
-        Prendre RDV (20 min)
+         class="bg-amberLimova hover:bg-amberHover text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow transition transform hover:-translate-y-0.5 flex items-center gap-2">
+        <i class="fa-regular fa-calendar-check"></i> Prendre RDV (20 min)
       </a>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
   <header class="pt-36 pb-20 px-6 max-w-6xl mx-auto text-center" id="vision">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amberLimova/10 border border-amberLimova/30 text-amberLimova text-xs font-semibold tracking-wide uppercase mb-8">
-      <i class="fa-solid fa-shield-halved"></i> Document Stratégique Comex • PME 30 à 500 Salariés
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amberLimova/10 border border-amberLimova/30 text-amberLimova text-xs font-bold tracking-wide uppercase mb-8">
+      <i class="fa-solid fa-sparkles"></i> Nouvelle Solution Officielle de la Marque Limova
     </div>
 
     <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-      L'IA opérationnelle embarquée <br class="hidden md:block">
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberLimova to-yellow-300">au cœur de vos équipes.</span>
+      L'IA opérationnelle in-situ <br class="hidden md:block">
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberLimova to-yellow-300">pour vos équipes de 30 à 500+ salariés.</span>
     </h1>
 
     <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-      Éliminez la taxe de coordination interne. <strong>Limova Team</strong> s'intègre nativement dans Slack et Microsoft Teams pour exécuter les tâches administratives et orchestrer vos outils du quotidien sans formation ni nouvelle interface.
+      Conçue spécifiquement pour les entreprises qui échangent au quotidien sur <strong>Slack</strong> et/ou <strong>Microsoft Teams</strong>. <strong>Limova Team</strong> s'embarque au cœur de vos discussions pour exécuter les tâches administratives et orchestrer vos outils métiers sans exiger la moindre formation ni changer vos habitudes.
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-      <a href="https://meetings-eu1.hubspot.com/quentin-coudert?uuid=4019de18-eba7-46dc-8cde-d0cdb8e3c54c" 
+      <a href="https://meetings-eu1.hubspot.com/quentin-coudert/limova-team?uuid=4238e347-91cc-4a51-bfda-f605644303c7" 
          target="_blank"
          class="w-full sm:w-auto bg-amberLimova hover:bg-amberHover text-white text-base font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 glow-amber flex items-center justify-center gap-2">
-        <i class="fa-regular fa-calendar-check"></i> Bloquer un créneau de 20 min avec Quentin
+        <i class="fa-regular fa-calendar-check"></i> Bloquer mon créneau de 20 min avec Quentin
       </a>
       <a href="#simulateur" 
-         class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-base font-medium px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
-        <i class="fa-solid fa-play"></i> Tester la simulation en direct
+         class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-base font-medium px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-play"></i> Voir la simulation Slack & Teams ↓
       </a>
     </div>
 
-    <!-- Trust Badges -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-slate-800 text-slate-400 text-sm">
-      <div class="flex items-center justify-center gap-2">
-        <i class="fa-solid fa-star text-amberLimova"></i> <strong>4.9/5</strong> sur Trustpilot (+1 200 avis)
-      </div>
-      <div class="flex items-center justify-center gap-2">
-        <i class="fa-solid fa-building text-amberLimova"></i> <strong>+35 000</strong> entreprises équipées
-      </div>
-      <div class="flex items-center justify-center gap-2">
-        <i class="fa-solid fa-server text-amberLimova"></i> Hébergement souverain <strong>Europe (Allemagne)</strong>
-      </div>
-      <div class="flex items-center justify-center gap-2">
-        <i class="fa-solid fa-bolt text-amberLimova"></i> Déploiement <strong>&lt; 24 heures</strong>
+    <!-- BANDEAU MÉDIAS OFFICIEL (EXACTEMENT COMME PRÉSENTATION LIMOVA 3) -->
+    <div class="pt-10 border-t border-slate-800">
+      <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-6">
+        Vu dans les plus grands médias et soutenu par les leaders de la tech
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-80 hover:opacity-100 transition">
+        <img src="https://cdn.prod.website-files.com/6a0063134738c0d492e2eece/6a0063626315db7dedb79039_69a2c0280e63b0ecb7eb0df7_6929732b16ce20ba4fe196d1_690e6dc6c783b6f54c1ee3d9_TF1_logo_2006.svg" alt="TF1" class="h-7 filter grayscale brightness-200">
+        <img src="https://cdn.prod.website-files.com/6a0063134738c0d492e2eece/6a006360380b1137fb4a5121_69a2c027f5e372d87058596a_6929732a42658ee44ba4b70c_6903d3d7ae9cd20d976c08c5_Logo_BFM_Business.svg" alt="BFM Business" class="h-7 filter grayscale brightness-200">
+        <img src="https://cdn.prod.website-files.com/6a0063134738c0d492e2eece/6a006366bf47faae5905145d_69a2c028f5e372d8705859a2_6929732b4c070978bf3a3ef8_6838eb32b4b9b0a2b1dbf12c_Logo_legend.png" alt="LEGEND" class="h-6 filter grayscale brightness-200">
+        <img src="https://cdn.prod.website-files.com/6a0063134738c0d492e2eece/6a00636646eb79d8b2cf7c15_69a2c028deb8ba87f9daba88_6929732ba17193c64a5fb96f_6903d40ac646d6bd27097b83_Le_Figaro_logo.svg" alt="Le Figaro" class="h-6 filter grayscale brightness-200">
+        <img src="https://cdn.prod.website-files.com/6a0063134738c0d492e2eece/6a00635f6ce43654e7626eed_69a2c027ed2e5be6d13f9113_6929732a2bf21b77f9db58a5_68323be0d17da67770376d68_Logo_Bpifrance.svg" alt="Bpifrance" class="h-7 filter grayscale brightness-200">
       </div>
     </div>
   </header>
 
-  <!-- 4 KPIS D'IMPACT -->
-  <section class="py-12 px-6 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <div class="bg-cardDark border border-borderDark p-6 rounded-2xl">
-        <div class="text-3xl font-black text-amberLimova mb-2">3 à 5h / sem</div>
-        <div class="text-sm font-semibold text-white mb-1">Gain de temps net par manager</div>
-        <div class="text-xs text-slate-400">Automatisation des synthèses, des relances de to-dos et des comptes-rendus.</div>
+  <!-- CHIFFRES ÉCO RASSURANTS DE LA MARQUE LIMOVA -->
+  <section class="py-12 px-6 max-w-7xl mx-auto" id="reassurance">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div class="bg-darkCard border border-borderDark p-5 rounded-2xl text-center">
+        <div class="text-3xl font-black text-amberLimova mb-1">65 M€</div>
+        <div class="text-xs font-semibold text-slate-300">Valorisation</div>
+        <div class="text-[11px] text-slate-500">Solidité & croissance prouvées</div>
       </div>
-      <div class="bg-cardDark border border-borderDark p-6 rounded-2xl">
-        <div class="text-3xl font-black text-amberLimova mb-2">&gt; 85%</div>
-        <div class="text-sm font-semibold text-white mb-1">Taux d'adoption spontanée à J+14</div>
-        <div class="text-xs text-slate-400">Interaction in-situ dans les messageries existantes sans apprentissage de prompt.</div>
+      <div class="bg-darkCard border border-borderDark p-5 rounded-2xl text-center">
+        <div class="text-3xl font-black text-amberLimova mb-1">8,6 M€</div>
+        <div class="text-xs font-semibold text-slate-300">Revenu Récurrent (ARR)</div>
+        <div class="text-[11px] text-slate-500">Rentabilité & modèle pérenne</div>
       </div>
-      <div class="bg-cardDark border border-borderDark p-6 rounded-2xl">
-        <div class="text-3xl font-black text-amberLimova mb-2">100% Connecté</div>
-        <div class="text-sm font-semibold text-white mb-1">Couverture applicative totale</div>
-        <div class="text-xs text-slate-400">Slack, Teams, Gmail, Calendar, Drive, Docs, Sheets, Notion, CRM.</div>
+      <div class="bg-darkCard border border-borderDark p-5 rounded-2xl text-center">
+        <div class="text-3xl font-black text-emerald-400 mb-1">0,34%</div>
+        <div class="text-xs font-semibold text-slate-300">Taux de Churn</div>
+        <div class="text-[11px] text-slate-500">Fidélité client exceptionnelle</div>
       </div>
-      <div class="bg-cardDark border border-borderDark p-6 rounded-2xl">
-        <div class="text-3xl font-black text-amberLimova mb-2">&lt; 24 heures</div>
-        <div class="text-sm font-semibold text-white mb-1">Délai de mise en service</div>
-        <div class="text-xs text-slate-400">Intégration SaaS clé en main sans mobilisation de la DSI.</div>
+      <div class="bg-darkCard border border-borderDark p-5 rounded-2xl text-center">
+        <div class="text-3xl font-black text-amberLimova mb-1">+35 000</div>
+        <div class="text-xs font-semibold text-slate-300">Entreprises Équipées</div>
+        <div class="text-[11px] text-slate-500">Déployé dans 35 pays</div>
+      </div>
+      <div class="bg-darkCard border border-borderDark p-5 rounded-2xl text-center col-span-2 md:col-span-1">
+        <div class="text-3xl font-black text-yellow-400 mb-1">4.9 / 5</div>
+        <div class="text-xs font-semibold text-slate-300">Trustpilot Vérifié</div>
+        <div class="text-[11px] text-slate-500">+1 200 avis dirigeants</div>
       </div>
     </div>
   </section>
 
-  <!-- SIMULATEUR INTERACTIF -->
-  <section id="simulateur" class="py-20 px-6 max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <span class="text-amberLimova text-xs font-bold tracking-widest uppercase">Expérience Interactive</span>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Testez Limova Team en conditions réelles</h2>
-      <p class="text-slate-400 text-sm mt-3 max-w-2xl mx-auto">
-        Découvrez comment Limova Team s'exécute directement dans vos flux d'équipe habituels.
-      </p>
-    </div>
+  <!-- ALLIANCE TECHNOLOGIQUE LIMOVA x OPENAI -->
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="bg-gradient-to-r from-darkCard to-slate-900 border border-borderDark p-8 md:p-12 rounded-3xl relative overflow-hidden">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Alliance Technologique</span>
+        <span class="text-slate-400 text-sm">Partenariat Officiel Direct</span>
+      </div>
 
-    <!-- Interface Mockup -->
-    <div class="bg-cardDark border border-borderDark rounded-2xl shadow-2xl overflow-hidden">
-      <!-- Top Bar Switcher -->
-      <div class="bg-slate-900 px-6 py-4 border-b border-borderDark flex flex-wrap items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-red-500"></span>
-          <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-          <span class="w-3 h-3 rounded-full bg-green-500"></span>
-          <span class="text-xs text-slate-400 ml-2 font-mono" id="app-badge"><i class="fa-brands fa-slack text-amberLimova mr-1"></i> #canal-operations</span>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4">
+        Limova x OpenAI : Les modèles mondiaux les plus avancés au cœur de vos flux
+      </h2>
+      <p class="text-slate-300 text-sm md:text-base max-w-3xl mb-8 leading-relaxed">
+        Un partenariat officiel direct avec OpenAI pour faire bénéficier votre entreprise des modèles les plus avancés au monde, intégrés directement à vos flux d'équipe Slack et Microsoft Teams.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-800">
+          <div class="text-amberLimova font-bold text-sm mb-2"><i class="fa-solid fa-bolt mr-2"></i> Accès Anticipé Mondial</div>
+          <div class="text-xs text-slate-300 leading-relaxed">Vos agents Limova Team intègrent en avant-première les dernières avancées d'OpenAI avant leur diffusion générale.</div>
         </div>
-        <div class="flex items-center gap-2 bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs font-semibold">
-          <button onclick="switchEnv('slack')" id="btn-slack" class="px-3 py-1.5 rounded bg-amberLimova text-white transition">Vue Slack</button>
-          <button onclick="switchEnv('teams')" id="btn-teams" class="px-3 py-1.5 rounded text-slate-400 hover:text-white transition">Vue Microsoft Teams</button>
+        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-800">
+          <div class="text-amberLimova font-bold text-sm mb-2"><i class="fa-solid fa-user-gear mr-2"></i> Ingénieur OpenAI Dédié</div>
+          <div class="text-xs text-slate-300 leading-relaxed">Un accompagnement technique continu au quotidien pour optimiser l'architecture et les cas d'usage d'entreprise.</div>
+        </div>
+        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-800">
+          <div class="text-amberLimova font-bold text-sm mb-2"><i class="fa-solid fa-handshake mr-2"></i> Co-développement Élite</div>
+          <div class="text-xs text-slate-300 leading-relaxed">Points hebdomadaires pour co-construire les fonctionnalités futures et présence officielle lors des keynotes.</div>
         </div>
       </div>
 
-      <!-- Scenarios Buttons -->
-      <div class="p-6 bg-slate-900/60 border-b border-borderDark">
-        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Sélectionnez une instruction opérationnelle :</div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <button onclick="runScenario(1)" class="text-left text-xs bg-slate-800 hover:bg-slate-700 p-3 rounded-xl border border-slate-700 text-slate-200 transition flex items-center gap-2">
-            <i class="fa-solid fa-list-check text-amberLimova"></i> Résumer le fil #projet-client et extraire les arbitrages
+      <div class="pt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 italic">
+        <span>« Ce partenariat est le plus important depuis la création de Limova. » — Yoan Drahy, Fondateur & CEO</span>
+        <span class="text-amberLimova font-semibold not-italic">Infrastructure Haute Fidélité</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTENARIAT OFFICIEL OGC NICE (LIGUE 1) -->
+  <section class="py-12 px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-darkCard border border-borderDark p-8 rounded-3xl overflow-hidden">
+      <div class="md:col-span-7 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/40 border border-red-800/40 text-red-400 text-xs font-bold uppercase">
+          Partenaire Officiel Ligue 1
+        </div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-white">
+          L'ambition de l'excellence : Limova s'affiche sur le maillot de l'OGC Nice
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Limova s'engage auprès de l'OGC Nice pour les saisons 2026/27, 2027/28 et 2028/29. Présente sur le haut du dos du maillot officiel des Aiglons et sur la panneautique LED de l'Allianz Riviera, Limova démontre la solidité financière de son modèle et fait de la Côte d'Azur un pôle européen d'innovation IA.
+        </p>
+        <div class="flex items-center gap-4 pt-2">
+          <img src="https://www.ogcnice-assets.com/images/cms/menus/logo-ogcnice.svg" alt="OGC Nice" class="h-10">
+          <span class="text-xs text-slate-400 border-l border-slate-700 pl-4 font-medium">Partenaire Premium 3 Saisons</span>
+        </div>
+      </div>
+      <div class="md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+        <img src="https://www.ogcnice-assets.com/images/articles/unes/2026/07/limova-cp.jpg" alt="Partenariat officiel Limova x OGC Nice" class="w-full h-56 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULATEUR INTERACTIF (AUX COULEURS RÉELLES DE SLACK & TEAMS) -->
+  <section id="simulateur" class="py-20 px-6 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-amberLimova text-xs font-bold tracking-widest uppercase">Immersion Opérationnelle</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Projettez vos équipes : Slack & Microsoft Teams</h2>
+      <p class="text-slate-400 text-sm mt-3 max-w-2xl mx-auto">
+        Basculez entre vos deux environnements quotidiens pour voir comment Limova Team s'intègre avec leurs codes graphiques authentiques.
+      </p>
+    </div>
+
+    <!-- Interface Mockup Responsive -->
+    <div class="rounded-2xl shadow-2xl overflow-hidden border transition-all duration-300" id="chat-container" style="background-color: #1A1D21; border-color: #2D3136;">
+      
+      <!-- Top Bar Switcher -->
+      <div class="px-6 py-4 flex flex-wrap items-center justify-between gap-4 transition-colors duration-300" id="mockup-header" style="background-color: #3F0E40; color: #FFFFFF;">
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+          </div>
+          <span class="text-xs font-bold ml-2 tracking-wide font-mono" id="app-badge">
+            <i class="fa-brands fa-slack mr-1.5"></i> #direction-operations
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2 bg-black/30 p-1.5 rounded-xl border border-white/10 text-xs font-bold">
+          <button onclick="switchEnv('slack')" id="btn-slack" class="px-3.5 py-1.5 rounded-lg text-white font-bold transition shadow" style="background-color: #4A154B; border: 1px solid #ECB22E;">
+            <i class="fa-brands fa-slack mr-1"></i> Slack (Aubergine)
           </button>
-          <button onclick="runScenario(2)" class="text-left text-xs bg-slate-800 hover:bg-slate-700 p-3 rounded-xl border border-slate-700 text-slate-200 transition flex items-center gap-2">
-            <i class="fa-regular fa-calendar-plus text-amberLimova"></i> Planifier la réunion Comex & synchroniser les agendas
+          <button onclick="switchEnv('teams')" id="btn-teams" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition">
+            <i class="fa-brands fa-microsoft mr-1"></i> Microsoft Teams (Indigo)
           </button>
-          <button onclick="runScenario(3)" class="text-left text-xs bg-slate-800 hover:bg-slate-700 p-3 rounded-xl border border-slate-700 text-slate-200 transition flex items-center gap-2">
-            <i class="fa-solid fa-bell text-amberLimova"></i> Détecter toutes les to-dos du canal et relancer les porteurs
+        </div>
+      </div>
+
+      <!-- Scenarios Selector -->
+      <div class="p-5 border-b border-white/10 bg-black/20">
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">Cliquez pour tester un flux opérationnel réel :</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <button onclick="runScenario(1)" class="text-left text-xs bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/10 text-slate-200 transition flex items-center gap-2.5">
+            <i class="fa-solid fa-list-check text-amberLimova"></i> 1. Résumer le fil projet & extraire les arbitrages
           </button>
-          <button onclick="runScenario(4)" class="text-left text-xs bg-slate-800 hover:bg-slate-700 p-3 rounded-xl border border-slate-700 text-slate-200 transition flex items-center gap-2">
-            <i class="fa-solid fa-file-invoice text-amberLimova"></i> Générer la note de synthèse Comex à partir de Sheets et Notion
+          <button onclick="runScenario(2)" class="text-left text-xs bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/10 text-slate-200 transition flex items-center gap-2.5">
+            <i class="fa-regular fa-calendar-plus text-amberLimova"></i> 2. Synchroniser les agendas & planifier le cadrage
+          </button>
+          <button onclick="runScenario(3)" class="text-left text-xs bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/10 text-slate-200 transition flex items-center gap-2.5">
+            <i class="fa-solid fa-bell text-amberLimova"></i> 3. Détecter les to-dos et relancer les responsables
+          </button>
+          <button onclick="runScenario(4)" class="text-left text-xs bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/10 text-slate-200 transition flex items-center gap-2.5">
+            <i class="fa-solid fa-file-invoice text-amberLimova"></i> 4. Générer la note Comex depuis Sheets & Notion
           </button>
         </div>
       </div>
 
       <!-- Chat Screen -->
       <div class="p-6 space-y-6 min-h-[340px]" id="chat-stream">
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold text-sm">QC</div>
-          <div>
+        <!-- Message Collaborateur -->
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-slate-700 flex items-center justify-center text-white font-bold text-sm shadow">QC</div>
+          <div class="flex-1">
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm font-bold text-white">Quentin Coudert</span>
-              <span class="text-xs text-slate-500">10:42</span>
+              <span class="text-xs text-slate-400">10:42</span>
             </div>
-            <div class="text-sm text-slate-300 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 max-w-xl">
+            <div class="text-sm text-slate-200 bg-white/5 p-3.5 rounded-xl border border-white/10 max-w-xl">
               <span class="text-amberLimova font-bold">@Limova Team</span> Peux-tu analyser les échanges de la semaine sur le déploiement client et me faire la synthèse des arbitrages urgents ?
             </div>
           </div>
         </div>
 
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full bg-amberLimova text-white flex items-center justify-center font-black text-sm shadow">LT</div>
+        <!-- Réponse Limova Team -->
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amberLimova text-white flex items-center justify-center font-black text-sm shadow">LT</div>
           <div class="flex-1">
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm font-bold text-amberLimova">Limova Team</span>
-              <span class="bg-amberLimova/20 text-amberLimova text-[10px] font-bold px-1.5 py-0.5 rounded">APP IN-SITU</span>
-              <span class="text-xs text-slate-500">10:42 • instantané</span>
+              <span class="bg-amberLimova/20 text-amberLimova text-[10px] font-bold px-2 py-0.5 rounded-full uppercase" id="chat-tag">Natif Slack</span>
+              <span class="text-xs text-slate-400">10:42 • instantané</span>
             </div>
-            <div class="text-sm text-slate-200 bg-cardDark p-4 rounded-xl border border-borderDark space-y-3 max-w-2xl">
+            <div class="text-sm text-slate-200 bg-black/40 p-4 rounded-xl border border-white/10 space-y-3 max-w-2xl shadow-inner">
               <div class="font-semibold text-white flex items-center gap-2">
                 <i class="fa-solid fa-circle-check text-emerald-400"></i> Synthèse opérationnelle exécutée (34 messages analysés) :
               </div>
@@ -218,8 +305,8 @@
                 <li><strong>Point bloquant résolu :</strong> Connexion de l'API CRM validée par l'administrateur.</li>
                 <li><strong>Échéance critique :</strong> Livraison des accès planifiée pour vendredi 17h00.</li>
               </ul>
-              <div class="pt-2 border-t border-slate-700/60 flex items-center justify-between text-xs">
-                <span class="text-slate-400"><i class="fa-solid fa-link text-amberLimova"></i> 2 documents Notion & 1 classeur Sheets synchronisés</span>
+              <div class="pt-2 border-t border-white/10 flex items-center justify-between text-xs">
+                <span class="text-slate-400"><i class="fa-solid fa-link text-amberLimova mr-1"></i> 2 fiches Notion & 1 classeur Sheets synchronisés</span>
                 <span class="text-emerald-400 font-semibold">Statut : À jour</span>
               </div>
             </div>
@@ -229,16 +316,16 @@
     </div>
   </section>
 
-  <!-- CALCULATEUR DE ROI -->
+  <!-- CALCULATEUR DE ROI INTERACTIF -->
   <section id="roi" class="py-20 px-6 bg-slate-900/40 border-y border-borderDark">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
         <span class="text-amberLimova text-xs font-bold tracking-widest uppercase">Rentabilité Décideurs</span>
         <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Simulez le gain net pour votre entreprise</h2>
-        <p class="text-slate-400 text-sm mt-3">Ajustez les curseurs selon la taille réelle de votre organisation (30 à 500 salariés).</p>
+        <p class="text-slate-400 text-sm mt-3">Ajustez les curseurs selon la taille réelle de votre organisation (30 à 500+ salariés).</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-cardDark border border-borderDark p-8 md:p-12 rounded-3xl shadow-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-darkCard border border-borderDark p-8 md:p-12 rounded-3xl shadow-xl">
         <div class="space-y-8">
           <div>
             <div class="flex justify-between text-sm font-semibold mb-2">
@@ -249,13 +336,13 @@
                    oninput="updateRoi()" class="w-full accent-amberLimova cursor-pointer">
             <div class="flex justify-between text-[11px] text-slate-500 mt-1">
               <span>30 salariés</span>
-              <span>500 salariés</span>
+              <span>500+ salariés</span>
             </div>
           </div>
 
           <div>
             <div class="flex justify-between text-sm font-semibold mb-2">
-              <span class="text-slate-300">Managers & directeurs concernés</span>
+              <span class="text-slate-300">Managers & chefs de projet</span>
               <span class="text-amberLimova font-bold text-base" id="val-managers">20 managers</span>
             </div>
             <input type="range" min="5" max="100" step="1" value="20" id="slider-managers" 
@@ -280,7 +367,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col justify-center space-y-6 bg-slate-900/80 p-8 rounded-2xl border border-slate-800">
+        <div class="flex flex-col justify-center space-y-6 bg-slate-950/80 p-8 rounded-2xl border border-slate-800">
           <div>
             <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Temps opérationnel récupéré par an</div>
             <div class="text-4xl md:text-5xl font-black text-white" id="res-heures">3 360 heures</div>
@@ -293,9 +380,9 @@
             <div class="text-xs text-slate-400 mt-1">Fin du reporting manuel et de la taxe de coordination interne.</div>
           </div>
 
-          <a href="https://meetings-eu1.hubspot.com/quentin-coudert?uuid=4019de18-eba7-46dc-8cde-d0cdb8e3c54c" 
+          <a href="https://meetings-eu1.hubspot.com/quentin-coudert/limova-team?uuid=4238e347-91cc-4a51-bfda-f605644303c7" 
              target="_blank" 
-             class="bg-amberLimova hover:bg-amberHover text-white text-center font-bold py-3 px-6 rounded-xl transition text-sm">
+             class="bg-amberLimova hover:bg-amberHover text-white text-center font-bold py-3.5 px-6 rounded-xl transition text-sm shadow">
             Bloquer 20 min pour simuler vos flux
           </a>
         </div>
@@ -310,7 +397,7 @@
       <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Limova Team face aux solutions du marché</h2>
     </div>
 
-    <div class="overflow-x-auto rounded-2xl border border-borderDark shadow-xl bg-cardDark">
+    <div class="overflow-x-auto rounded-2xl border border-borderDark shadow-xl bg-darkCard">
       <table class="w-full text-left text-sm">
         <thead class="bg-slate-900 text-xs uppercase tracking-wider text-slate-400 border-b border-borderDark">
           <tr>
@@ -375,14 +462,14 @@
   </section>
 
   <!-- ACCORDÉON DES 5 OBJECTIONS COMEX -->
-  <section id="securite" class="py-20 px-6 max-w-4xl mx-auto">
+  <section class="py-20 px-6 max-w-4xl mx-auto">
     <div class="text-center mb-12">
       <span class="text-amberLimova text-xs font-bold tracking-widest uppercase">FAQ & Gouvernance</span>
       <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Réponses aux 5 objections des décideurs</h2>
     </div>
 
     <div class="space-y-4">
-      <div class="bg-cardDark border border-borderDark rounded-xl overflow-hidden">
+      <div class="bg-darkCard border border-borderDark rounded-xl overflow-hidden">
         <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:text-amberLimova transition">
           <span>1. « Nous avons déjà des licences ChatGPT Enterprise ou Copilot »</span>
           <i class="fa-solid fa-chevron-down text-slate-400" id="icon-1"></i>
@@ -392,7 +479,7 @@
         </div>
       </div>
 
-      <div class="bg-cardDark border border-borderDark rounded-xl overflow-hidden">
+      <div class="bg-darkCard border border-borderDark rounded-xl overflow-hidden">
         <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:text-amberLimova transition">
           <span>2. « La sécurité et la confidentialité de nos données sont un prérequis »</span>
           <i class="fa-solid fa-chevron-down text-slate-400" id="icon-2"></i>
@@ -402,7 +489,7 @@
         </div>
       </div>
 
-      <div class="bg-cardDark border border-borderDark rounded-xl overflow-hidden">
+      <div class="bg-darkCard border border-borderDark rounded-xl overflow-hidden">
         <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:text-amberLimova transition">
           <span>3. « Nos collaborateurs n'ont ni le temps ni l'envie de se former »</span>
           <i class="fa-solid fa-chevron-down text-slate-400" id="icon-3"></i>
@@ -412,7 +499,7 @@
         </div>
       </div>
 
-      <div class="bg-cardDark border border-borderDark rounded-xl overflow-hidden">
+      <div class="bg-darkCard border border-borderDark rounded-xl overflow-hidden">
         <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:text-amberLimova transition">
           <span>4. « Nous craignons les hallucinations des modèles d'IA »</span>
           <i class="fa-solid fa-chevron-down text-slate-400" id="icon-4"></i>
@@ -422,7 +509,7 @@
         </div>
       </div>
 
-      <div class="bg-cardDark border border-borderDark rounded-xl overflow-hidden">
+      <div class="bg-darkCard border border-borderDark rounded-xl overflow-hidden">
         <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:text-amberLimova transition">
           <span>5. « L'implémentation va être longue et mobiliser la DSI »</span>
           <i class="fa-solid fa-chevron-down text-slate-400" id="icon-5"></i>
@@ -434,10 +521,10 @@
     </div>
   </section>
 
-  <!-- CTA CLOSING COMEX -->
+  <!-- CTA CLOSING COMEX (AVEC LE NOUVEAU LIEN HUBSPOT) -->
   <section class="py-20 px-6 max-w-5xl mx-auto">
-    <div class="bg-gradient-to-b from-cardDark to-slate-900 border-2 border-amberLimova/40 p-10 md:p-14 rounded-3xl text-center shadow-2xl relative overflow-hidden glow-amber">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amberLimova/10 border border-amberLimova/30 text-amberLimova text-xs font-bold uppercase mb-6">
+    <div class="bg-gradient-to-b from-darkCard to-slate-950 border-2 border-amberLimova/40 p-10 md:p-14 rounded-3xl text-center shadow-2xl relative overflow-hidden glow-amber">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amberLimova/10 border border-amberLimova/30 text-amberLimova text-xs font-bold uppercase mb-6">
         Prise de Rendez-Vous Directe
       </div>
 
@@ -450,7 +537,7 @@
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-        <a href="https://meetings-eu1.hubspot.com/quentin-coudert?uuid=4019de18-eba7-46dc-8cde-d0cdb8e3c54c" 
+        <a href="https://meetings-eu1.hubspot.com/quentin-coudert/limova-team?uuid=4238e347-91cc-4a51-bfda-f605644303c7" 
            target="_blank" 
            class="w-full sm:w-auto bg-amberLimova hover:bg-amberHover text-white text-base font-extrabold px-10 py-5 rounded-2xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
           <i class="fa-regular fa-calendar-check text-xl"></i> Bloquer un créneau de 20 minutes avec Quentin
@@ -465,7 +552,7 @@
 
   <!-- FOOTER -->
   <footer class="py-10 px-6 border-t border-borderDark text-center text-xs text-slate-500">
-    <p class="mb-2">© 2026 Limova Team • Tous droits réservés • Hébergement européen souverain (Allemagne)</p>
+    <p class="mb-2">© 2026 Limova Team • Marque officielle Limova • Hébergement européen souverain (Allemagne)</p>
     <p>38B Boulevard Victor Hugo, 06000 Nice • SIRET : 982 965 600 00017</p>
   </footer>
 
@@ -475,20 +562,40 @@
       const btnSlack = document.getElementById('btn-slack');
       const btnTeams = document.getElementById('btn-teams');
       const badge = document.getElementById('app-badge');
+      const header = document.getElementById('mockup-header');
+      const container = document.getElementById('chat-container');
+      const tag = document.getElementById('chat-tag');
+
       if (env === 'slack') {
-        btnSlack.className = 'px-3 py-1.5 rounded bg-amberLimova text-white transition';
-        btnTeams.className = 'px-3 py-1.5 rounded text-slate-400 hover:text-white transition';
-        badge.innerHTML = '<i class="fa-brands fa-slack text-amberLimova mr-1"></i> #canal-operations';
+        header.style.backgroundColor = '#3F0E40';
+        container.style.backgroundColor = '#1A1D21';
+        container.style.borderColor = '#2D3136';
+        btnSlack.style.backgroundColor = '#4A154B';
+        btnSlack.style.border = '1px solid #ECB22E';
+        btnSlack.className = 'px-3.5 py-1.5 rounded-lg text-white font-bold transition shadow';
+        btnTeams.style.backgroundColor = 'transparent';
+        btnTeams.style.border = 'none';
+        btnTeams.className = 'px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition';
+        badge.innerHTML = '<i class="fa-brands fa-slack text-amberLimova mr-1.5"></i> #direction-operations';
+        if (tag) tag.innerText = 'Natif Slack';
       } else {
-        btnTeams.className = 'px-3 py-1.5 rounded bg-amberLimova text-white transition';
-        btnSlack.className = 'px-3 py-1.5 rounded text-slate-400 hover:text-white transition';
-        badge.innerHTML = '<i class="fa-brands fa-microsoft text-blue-400 mr-1"></i> Équipe Opérations > Général';
+        header.style.backgroundColor = '#464EB8';
+        container.style.backgroundColor = '#1F1F23';
+        container.style.borderColor = '#5B5FC7';
+        btnTeams.style.backgroundColor = '#5B5FC7';
+        btnTeams.style.border = '1px solid #FFFFFF';
+        btnTeams.className = 'px-3.5 py-1.5 rounded-lg text-white font-bold transition shadow';
+        btnSlack.style.backgroundColor = 'transparent';
+        btnSlack.style.border = 'none';
+        btnSlack.className = 'px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition';
+        badge.innerHTML = '<i class="fa-brands fa-microsoft text-white mr-1.5"></i> Équipe Opérations > Général';
+        if (tag) tag.innerText = 'Natif Teams';
       }
     }
 
     const scenarios = {
       1: {
-        user: "@Limova Team Résume le canal #projet-client et liste les arbitrages clés de la semaine.",
+        user: "@Limova Team Résume le canal #direction-operations et liste les arbitrages clés de la semaine.",
         bot: `<div class="font-semibold text-white flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Synthèse de semaine générée (48 messages analysés) :</div>
               <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
                 <li><strong>Cadrage technique :</strong> Connecteurs API Salesforce validés sans surcoût.</li>
@@ -516,7 +623,7 @@
       4: {
         user: "@Limova Team Génère la note de synthèse Comex en PDF à partir des données Sheets et Notion.",
         bot: `<div class="font-semibold text-white flex items-center gap-2"><i class="fa-solid fa-file-pdf text-emerald-400"></i> Artefact exécutif généré avec succès :</div>
-              <p class="text-xs text-slate-300">Rapport d'audit de 4 pages compilé au format Haute-Couture. Rapprochement financier Sheets & objectifs Notion validé.</p>
+              <p class="text-xs text-slate-300">Rapport d'audit compilé au format Haute-Couture. Rapprochement financier Sheets & objectifs Notion validé.</p>
               <div class="flex gap-2 mt-2">
                 <span class="bg-amberLimova/20 text-amberLimova text-xs px-2.5 py-1 rounded font-semibold">Document prêt</span>
                 <span class="text-xs text-slate-400 py-1">Envoyé par e-mail aux membres du Comex</span>
@@ -528,26 +635,26 @@
       const s = scenarios[id];
       const chat = document.getElementById('chat-stream');
       chat.innerHTML = `
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold text-sm">QC</div>
-          <div>
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-slate-700 flex items-center justify-center text-white font-bold text-sm shadow">QC</div>
+          <div class="flex-1">
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm font-bold text-white">Quentin Coudert</span>
-              <span class="text-xs text-slate-500">À l'instant</span>
+              <span class="text-xs text-slate-400">À l'instant</span>
             </div>
-            <div class="text-sm text-slate-300 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 max-w-xl">
+            <div class="text-sm text-slate-200 bg-white/5 p-3.5 rounded-xl border border-white/10 max-w-xl">
               ${s.user}
             </div>
           </div>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full bg-amberLimova text-white flex items-center justify-center font-black text-sm shadow">LT</div>
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amberLimova text-white flex items-center justify-center font-black text-sm shadow">LT</div>
           <div class="flex-1">
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm font-bold text-amberLimova">Limova Team</span>
-              <span class="bg-amberLimova/20 text-amberLimova text-[10px] font-bold px-1.5 py-0.5 rounded">EXÉCUTION NATIVE</span>
+              <span class="bg-amberLimova/20 text-amberLimova text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">EXÉCUTION NATIVE</span>
             </div>
-            <div class="text-sm text-slate-200 bg-cardDark p-4 rounded-xl border border-borderDark space-y-2 max-w-2xl">
+            <div class="text-sm text-slate-200 bg-black/40 p-4 rounded-xl border border-white/10 space-y-2 max-w-2xl shadow-inner">
               ${s.bot}
             </div>
           </div>
@@ -560,7 +667,7 @@
       const managers = parseInt(document.getElementById('slider-managers').value);
       const tarif = parseInt(document.getElementById('slider-tarif').value);
 
-      document.getElementById('val-salaries').innerText = salaries + ' salariés';
+      document.getElementById('val-salaries').innerText = salaries + (salaries >= 500 ? '+ salariés' : ' salariés');
       document.getElementById('val-managers').innerText = managers + ' managers';
       document.getElementById('val-tarif').innerText = tarif + ' € / h';
 
